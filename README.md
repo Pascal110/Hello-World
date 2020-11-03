@@ -1,2 +1,6 @@
 # Hello-World
-This is my first Git Hub code, just for fun
+
+Hey! Guys my name is Joseph, this is my first
+Git work.. Not much but fun
+
+PS. I love AI/Robotics 
