@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+<head>
+    <title>Splash</title>
+<meta charset="UTF-8">
+    <meta name="viewport"
+          content="minimal-ui, user-scalable=0, width=device-width, height=device-height, initial-scale=1, maximum-scale=5, minimum-scale=1"/>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>  
+<style>
+body {
+    text-align:center;
+    background:linear-gradient(#ff5500 5%,#ff7733 );
+    height:auto;
+}
+.bar {
+    border-radius:5px;
+    padding:15px;
+    background-color:black;
+}
+.navigation {
+    float:left;
+}
+.navbar {
+    font-size:25px;
+    color:#ff5500;
+}
+.pagename {
+    text-align:center;
+    margin:;
+    font-weight:bolder;
+    font-size:25px;
+    font-family:fantasy;
+    text-transform:uppercase;
+    color:#ff5500;
+    
+}
+@keyframes skew {
+    0% {
+        transform: skew(0deg);
+        transform: rotate(0deg);
+    }
+     10% {
+        transform: skew(30deg);
+        transform: rotate(10deg);
+    }
+    20% {   
+        transform: skew(30deg);
+        transform: rotate(30deg);}
+    30%  {
+        transform: skew(20deg);
+        transform: rotate(10deg);
+    }
+    40% {
+        transform: skew(10deg);
+        transform: rotate(-30deg);
+    }
+    60% {
+        transform: skew(40deg);
+        transform: rotate(-10deg);
+    }
+    80% {
+        transform: skew(20deg);
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: skew(0deg);
+        transform: rotate(0deg);
+    }
+}
+.drpdwn {
+    display:inline-block;
+    position:relative;
+}
+.content {
+    height:auto;
+    border-radius:7px;
+    font-size:20px;
+    font-family:serif;
+    display:none;
+    position:absolute;
+    background-color:#000000;
+    min-width:200px;
+    z-index:1;
+    color:#ff5500;
+    transform:translate(130px, 65px);
+    animation-name:opacity;
+    animation-duration:3s;
+}
+.drpdwn:hover .content {
+    display:block;
+}
+@keyframes opacity {
+    from{ opacity:0}
+    to{ opacity:1}
+}
+a:hover {
+    color:#ff5500;
+    transition:color 3s;
+} 
+a:active {
+    color:#0000ff;
+}
+a:visited {
+    
+}
+a:link {   
+    text-decoration:none;
+    color:#ff5500;
+    margin:5px;
+}
+#tabbar {
+    margin-top:5px;
+    border-radius:5px;
+    padding:15px;
+    background-color:#000000;
+}
+.navtab {
+    font-size:15px;
+    border-radius:5px; 
+    color:#ff5500;
+}
+.j {
+    margin-left:3px; 
+    font-weight:bold;
+}
+.j:hover {
+    color:#0000ff;
+    transition:color 2s;
+}
+.view {
+    margin:10px;
+    color:#000000;
+}
+.btn {
+    color:#ff5500;
+    text-decoration:none;
+    font-size:15px;
+    background-color:#000000;
+    transition:color 3s;
+}
+.k {
+    float:left;
+    font-family:serif;
+    font-weight:bolder;
+    font-size:30px;
+}
+#img {
+    border:5px solid black;
+    border-radius:10px;
+}
+.story {
+    height:auto;
+    margin-top:10px;
+    background-color:#;
+    color:#000000;
+}
+.l {
+    font-size:50px;
+    font-weight:bolder;
+    font-family:serif;
+    text-transform:uppercase;
+}
+.ll {
+    font-size:15px;
+    font-weight:bold;
+    font-family:cursive;
+}
+.lll {
+    font-weight:bolder;
+    font-family:serif;
+    font-size:18px;
+}
+.m {
+    margin-top:20px;
+    border-radius:10px;
+    border:7px solid #ffffff;
+    border-style: ;
+    height:auto;
+    color:#ff5500;
+    background-color:#000000;
+    font-family:serif;
+    font-size:15px;
+}
+.mm {
+    margin:15px;
+    font-size:20px;
+    font-family:sans-serif;
+    text-decoration:underline;
+}
+.D {
+    font-size:13px;
+}
+.pc {
+    font-size:15px;
+    font-weight:bolder;
+}
+.pd {
+    background-color:;
+    font-size:20px;
+    font-weight:bolder;
+}
+.n {
+    margin:20px;
+    font-weight:bolder;
+    text-transform:uppercase;
+    font-size:50px;
+    font-family:monospace;
+    letter-spacing:5px
+}
+hr {
+    width:150px;
+}
+#imgi {
+    border:5px solid black;
+    margin-top:20px;
+    padding:50px;
+    background-color:#d9d9d9;
+    background-image:url("file:///storage/emulated/0/Download/pexels-photo-1648768.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-279719.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-447592.jpeg");
+    background-size:contain;
+    background-position:right,right,left;
+   background-repeat:no-repeat;
+    border-radius:5px;
+    animation-name:imgichange;
+    animation-duration:25s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+@keyframes imgichange {
+    0%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-1648768.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-279719.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-447592.jpeg");
+     background-size:contain;
+     background-position:right,right,left;
+     background-repeat:no-repeat;}
+    10%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-276724.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-2456909.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-1080696.jpeg");
+     background-size:contain;
+     background-position:right,right,left;
+     background-repeat:no-repeat;}
+   30%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-2456909.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-447592.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-279719.jpeg");
+     background-size:contain;
+     background-position:right,right,left;}
+    50%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-1643384.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-2456909.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-1454805.jpeg");
+     background-size:contain;
+     background-position:left,left, right;
+     background-repeat:no-repeat;}
+    70%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-1648768.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-276724.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-1080696.jpeg");
+     background-size:contain;
+     background-position:right,right,left;
+     background-repeat:no-repeat;}
+    100%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-1454805.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-279719.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-1643384.jpeg");
+     background-size:contain;
+     background-position:right,right,left;
+     background-repeat:no-repeat;}
+}  
+#imgii {
+     padding:30px;
+     border:5px solid black;
+    background-color:#d9d9d9; background-image:url("file:///storage/emulated/0/Download/pexels-photo-323780.jpeg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    border-radius:5px;
+    animation-name:imgiichange;
+    animation-duration:20s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+@keyframes imgiichange {
+    0%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-323780.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-1732414.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-1707823.jpeg");
+     background-size:contain;
+     background-position:right,left;
+     background-repeat:no-repeat;}
+    10%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-259919.jpeg"), 
+    url("file:///storage/emulated/0/Download/pexels-photo-534174.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-830891.jpeg");     background-size:contain;
+     background-position:left,right,left;
+     background-repeat:no-repeat;}
+      30%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-1722183.jpeg"),
+      url("file:///storage/emulated/0/Download/pexels-photo-1769356.jpeg"),
+      url("file:///storage/emulated/0/Download/pexels-photo-1707823.jpeg");
+     background-size:contain;
+     background-position:left,left,right;
+     background-repeat:no-repeat;}
+    50%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-1769356.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-323780.jpeg")
+   url("file:///storage/emulated/0/Download/pexels-photo-830891.jpeg");
+     background-size:contain;
+     background-position:right,right,left;
+     background-repeat:no-repeat;}
+    70%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-534174.jpeg"),
+    url("file:///storage/emulated/0/Download/pexels-photo-259919.jpeg");
+     background-size:contain;
+     background-position:right,left;
+     background-repeat:no-repeat;}
+    100%{background-image:url("file:///storage/emulated/0/Download/pexels-photo-1732414.jpeg"), 
+    url("file:///storage/emulated/0/Download/pexels-photo-323780.jpeg");
+     background-size:contain;
+     background-position:right,left,right;
+     background-repeat:no-repeat;}
+}     
+.label {
+    padding-top:20px;
+    font-size:30px;
+    border-radius:5px;
+    color:#000000;
+    animation-name:;
+    animation-duration:25s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in;
+}
+.a {
+    color:#ff5500;
+    border-radius:5px;
+    background-color:black;
+}
+.aa {
+    margin:3px;
+}
+footer {
+    margin-top:20px;
+    padding:15px;
+    background-color:#000000;
+    color:#ff5500;
+    border-radius:3px;
+}
+</style>
+<body>
+<div class="bar">
+   <div class="navigation">
+     <div class="drpdwn">
+    <div class="navbar">☰ </div>
+      <span class="content">
+      <ul>
+    <li><a href="#">Favourate</a></li> 
+    <li><a href="#">The TEAM</a></li> 
+    <li><a href="#">Community</a></li> 
+    <li><a href="#">Profile</a></li>
+      </ul>
+      </span>
+    </div>
+</div>
+     <span class="pagename">
+      splash
+     </span>
+</div>
+ <nav id="tabbar">
+    <div class="navtab"> 
+   <span class="j">Images</span>
+   <span class="j">Videos</span>
+   <span class="j">Music</span>
+   <span class="j">Magazines</span>       <span class="j">Trending</span>
+    </div>
+ </nav>   
+ <div class="view">
+     <span class="k">Vigor</span>
+     <br/> <br/>
+     <link src="img.css"/>
+     <img id="img" src="file:///storage/emulated/0/Logo by continuum/mylogo.png" width="300px" height="300px" />
+     <button onclick="prev()" class="btn"><<</button>
+     <button onclick="next()" class="btn">>></button>
+ </div>
+ <div class="story">
+     <span class="l">getting started</span> <br/>
+     <span class="ll">an exquisite talkshow by</span> <br/>
+     <span class="lll">
+         steve beckins
+     </span>
+     <div class="m">
+     <span>
+   <b class="mm">Beautiful people</b>
+   <br/> <br/>
+   <span class="D">
+ <span class="pc">Hello! </span>Everyone My Name Is Joseph <br/> <br/>
+ <span class="ll">And You Are Welcome To</span>  <br/> <br/>
+ <span class="pd">My splash page</span>
+ </span> <br/> <br/>
+     </span>
+     When I Started Learning 
+     HTML And <br /> CSS, At The Beginning I Thought<br/>
+     It Will Be Hard And Stressful <br/> But
+     I Never Knew How <br />Easy It Was.<br /> <br /> The Basics Were Straight <br /> Forward And 
+  Less Confusing. <br/>Although It 
+     Becomes More <br /> complex As You Go On    <br/> <br />
+     Its Really Fun. <br /> <br />
+     </div>
+ </div>
+ <div class="n"> My <br/>Designs</div>
+ <div id="imgi">
+     <div class="label"> 
+     HOME
+      <span class="a"><span class="aa">DESIGNS</span></span>
+      </div>
+ </div> <br/>
+ <div id="imgii">
+     <div class="label"> 
+     ARCHITECTURAL <br/>
+      <span class="a"><span class="aa">DESIGNS</span></span>
+      </div>
+ </div>
+<footer>
+    <div>copyright 2020</div>
+</footer> 
+ <script>
+   var images = [
+   "file:///storage/emulated/0/Logo by continuum/mylogo.png",
+   "file:///storage/emulated/0/Logo by continuum/mylogo1.png",
+   "file:///storage/emulated/0/Logo by continuum/mylogo2.png",
+   "file:///storage/emulated/0/Logo by continuum/mylogo7.png"
+   ];  
+   var num = 0;
+   
+   function next() {
+     var img = document.getElementById("img");
+     num++;
+     if (num >= images.length) {
+         num = 0;
+     }
+     img.src = images[num];
+   }
+   
+   function prev() {
+     var img = document.getElementById("img");
+     num--;
+     if (num < 0) {
+         num = images.length-1;
+     }
+     img.src = images[num];
+   };
+  $(function() {
+   $(".navbar").click(function() {
+       $(".content").fadeToggle(1000);
+    });
+   });
+ </script>
+</body>
+</html>
